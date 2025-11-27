@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - "renovate.json"
+      - "renovate/**"
+      - ".github/workflows/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.0.0
+
+      - name: Check commit message
+        uses: wagoid/commitlint-github-action@v6.0.0
+
+      - name: Install Node
+        uses: actions/setup-node@v6.0.0
+        with:
+          node-version: 24
+
+      - name: Install Renovate
+        run: npm install -g renovate
+
+      - name: Validate Renovate config
+        run: npx renovate-config-validator renovate.json renovate/*.json

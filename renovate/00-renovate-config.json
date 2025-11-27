@@ -1,0 +1,8 @@
+{
+  "branchPrefix": "renovate/",
+  "platform": "github",
+  "autodiscover": true,
+  "vulnerabilityAlerts": {
+    "enabled": false
+  }
+}
