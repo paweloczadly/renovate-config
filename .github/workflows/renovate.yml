@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Get token
         id: get_token
-        uses: actions/create-github-app-token@v2.0.0
+        uses: actions/create-github-app-token@v2.2.0
         with:
           app-id: ${{ secrets.RENOVATE_GITHUB_APP_ID }}
           owner: paweloczadly
