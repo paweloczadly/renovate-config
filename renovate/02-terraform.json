@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "local>paweloczadly/renovate-config//renovate/01-commons"
+  ],
+
+  "enabledManagers": [
+    "terraform"
+  ],
+
+  "packageRules": [
+    {
+      "description": "Group all Terraform module updates",
+      "groupName": "terraform-module",
+      "matchDepTypes": ["module"],
+      "matchManagers": ["terraform"],
+      "matchPackageNames": ["*"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
+    },
+    {
+      "description": "Group all Terraform provider updates",
+      "groupName": "terraform-provider",
+      "matchDepTypes": ["required_provider"],
+      "matchManagers": ["terraform"],
+      "matchPackageNames": ["*"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
+    }
+  ]
+}
