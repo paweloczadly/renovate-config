@@ -17,8 +17,9 @@ jobs:
           owner: paweloczadly
           private-key: ${{ secrets.RENOVATE_GITHUB_APP_PRIVATE_KEY }}
           repositories: |
-            renovate-config
             org
+            renovate-config
+            repository-template
 
       - name: Checkout
         uses: actions/checkout@v6.0.1
