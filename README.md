@@ -31,6 +31,14 @@ This setup keeps all logic, secrets and policies in one place.
 }
 ```
 
+For Gradle/JVM projects, use:
+
+```json
+{
+  "extends": ["local>paweloczadly/renovate-config//renovate/02-gradle"]
+}
+```
+
 ---
 
 ## 📄 License

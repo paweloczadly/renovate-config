@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "local>paweloczadly/renovate-config//renovate/01-commons"
+  ],
+
+  "enabledManagers": [
+    "gradle",
+    "gradle-wrapper"
+  ],
+
+  "packageRules": [
+    {
+      "description": "Group Gradle Wrapper updates",
+      "matchManagers": ["gradle-wrapper"],
+      "groupName": "gradle-wrapper",
+      "separateMajorMinor": false
+    },
+    {
+      "description": "Group Gradle plugin updates",
+      "matchManagers": ["gradle"],
+      "matchDepTypes": ["plugin", "plugins"],
+      "groupName": "gradle-plugins",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
+    },
+    {
+      "description": "Group Gradle library updates",
+      "matchManagers": ["gradle"],
+      "matchDepTypes": ["dependencies", "dependency", "implementation", "api", "compileOnly", "runtimeOnly", "annotationProcessor", "testImplementation", "testCompileOnly", "testRuntimeOnly"],
+      "groupName": "gradle-dependencies",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"]
+    }
+  ]
+}
