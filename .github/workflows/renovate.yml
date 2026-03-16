@@ -20,6 +20,7 @@ jobs:
             org
             renovate-config
             repository-template
+            openrewrite-recipes
 
       - name: Checkout
         uses: actions/checkout@v6.0.2
