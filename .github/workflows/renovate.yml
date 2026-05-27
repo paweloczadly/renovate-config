@@ -21,6 +21,7 @@ jobs:
             renovate-config
             repository-template
             openrewrite-recipes
+            gradle-springinitializr-plugin
 
       - name: Checkout
         uses: actions/checkout@v6.0.2
