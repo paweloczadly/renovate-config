@@ -17,11 +17,12 @@ jobs:
           owner: paweloczadly
           private-key: ${{ secrets.RENOVATE_GITHUB_APP_PRIVATE_KEY }}
           repositories: |
+            gradle-springinitializr-plugin
             org
+            openrewrite-recipes
             renovate-config
             repository-template
-            openrewrite-recipes
-            gradle-springinitializr-plugin
+            talks
 
       - name: Checkout
         uses: actions/checkout@v6.0.2
