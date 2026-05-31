@@ -17,6 +17,7 @@ jobs:
           owner: paweloczadly
           private-key: ${{ secrets.RENOVATE_GITHUB_APP_PRIVATE_KEY }}
           repositories: |
+            gpx
             gradle-springinitializr-plugin
             org
             openrewrite-recipes
