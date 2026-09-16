@@ -24,6 +24,7 @@ jobs:
             renovate-config
             repository-template
             talks
+            tourwithcham-com
 
       - name: Checkout
         uses: actions/checkout@v7.0.0
